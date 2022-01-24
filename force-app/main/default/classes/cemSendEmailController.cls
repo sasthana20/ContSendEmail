@@ -383,7 +383,7 @@ system.debug('***** search Term: ' + searchTerm + ' ==== selectedIds: ' + select
             emailTemplateList=[Select Id,Body,Subject,HtmlValue,Name,FolderName,Description,UiType from EmailTemplate where UiType='SFX'];
         }
         if(filterValue=='myClassicTemplates'){
-            emailTemplateList=[Select Id,Body,Subject,HtmlValue,Name,FolderName,Description,UiType from EmailTemplate where UiType='Aloha' AND OwnerId=:loggedInUserID];
+            emailTemplateList=[Select Id,Body,Subject,HtmlValue,Name,FolderName,Description,UiType from EmailTemplate where UiType='Aloha' /*AND OwnerId=:loggedInUserID*/];
         }
         System.debug('emailTemplateList '+emailTemplateList[0].HtmlValue);
         return emailTemplateList;
